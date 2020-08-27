@@ -1,9 +1,6 @@
-<h2>Welcome To Upscope API</h2>
-<div>
-  <h3>Select your role!</h3>
-  <div>
-    <button ngbButton [routerLink]="['/manager']">Manager</button>
-    <button ngbButton [routerLink]="['/list']">Client</button>
-  </div>
+<div class="container">
+  <button class="btn btn-link " [routerLink]="['/']">Demo Select Page</button>
+  <router-outlet>
+
+  </router-outlet>
 </div>
-<router-outlet></router-outlet>

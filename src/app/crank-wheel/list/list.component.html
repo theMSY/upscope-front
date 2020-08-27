@@ -1,0 +1,19 @@
+<div class="row p-4">
+  <div class="col-12">
+    <h2>Select One of the agents:</h2>
+
+    <div *ngIf="loading">
+      Loading Agents...
+    </div>
+
+    <div *ngIf="!loading && managers">
+      <div class="card mb-4" *ngFor="let manager of managers">
+        <div class="card-body">
+          <h5 class="card-title">Agent</h5>
+          <p class="card-text">{{manager.email}}</p>
+          <a [routerLink]="['/crank-wheel/watch/'+manager.email]" class="float-right btn btn-primary">Request a Meeting</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+<div *ngIf="loading">Loading LINK</div>
+<div class=".embed-responsive" *ngIf="!loading && url">
+  <iframe [src]="sanitizedUrl(url)" width="100%" height="500px" ></iframe>
+</div>

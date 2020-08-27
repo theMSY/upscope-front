@@ -1,0 +1,17 @@
+
+<div class="row">
+  <div class="col-12">
+    <h2>Active Agent list</h2>
+    <h3 *ngIf="loading" class="text-center">Loading Managers' list</h3>
+    <div *ngIf="!loading && visitors">
+      <div class="card mb-2" *ngFor="let visitor of visitors">
+        <div class="card-body">
+          <h5 class="card-title">Agent : {{visitor.nickname}}</h5>
+          <p class="card-text">Status : <span>{{status(visitor)}}</span></p>
+          <a *ngIf="visitor.is_online" [routerLink]="['/upscope/watch/'+visitor.short_id]"  class="float-right btn btn-primary">Request a Meeting</a>
+        </div>
+      </div>
+    </div>
+    <button *ngIf="!loading" class="btn btn-primary float-right" (click)="fetch()">Refresh</button>
+  </div>
+</div>

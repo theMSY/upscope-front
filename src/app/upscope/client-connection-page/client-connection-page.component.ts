@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {DomSanitizer} from "@angular/platform-browser";
-import {UpscopeService} from "../services/upscope.service";
+import {UpscopeService} from "../../services/upscope.service";
 
 @Component({
   selector: 'app-client-connection-page',

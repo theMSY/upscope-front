@@ -1,7 +1,0 @@
-<div>
-  <div *ngFor="let visitor of visitors">
-    <h3>Client : {{visitor.nickname}} </h3>
-    <h4>Status : <span>{{status(visitor)}}</span></h4>
-    <button *ngIf="visitor.is_online" ngbButton [routerLink]="['/manager/manager/'+visitor.short_id]" > Watch</button>
-  </div>
-</div>
